@@ -5,5 +5,5 @@ export default function handler(request, response) {
     console.log(request.headers);
     console.log(undefined)
     console.log(null)
-    return response.status(200).body({name: "John Doe"}).end();
+    return response.status(200).end("hello");
   }
