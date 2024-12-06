@@ -5,5 +5,6 @@ export default function handler(request, response) {
     console.log(request.headers);
     console.log(undefined)
     console.log(null)
-    return response.status(200).end({"headers": { "content-type": "application/json"}, body: "hello");
+    return     response.writeHead(200, { "Content-Type": "application/json" }).end(JSON.stringify({"body": "hello"}))
+
   }
